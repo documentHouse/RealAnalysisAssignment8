@@ -20,7 +20,7 @@
 
 \title{Real Analysis $\mathbb{I}$: \\ Assignment 8}
 \author{Andrew Rickert}
-\date{Started: June 15, 2011 \\ \hspace{1pt} Ended: June ??,  2011}                                           % Activate to display a given date or no date
+\date{Started: June 20, 2011 \\ \hspace{1pt} Ended: June ??,  2011}                                           % Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -31,6 +31,21 @@
 \textbf{Class 18.100B} - Problem 1\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
+
+We need to show that if $f$ is continuous on $\mathbb{R}^+$ and $f(x^2) = f(x)$ for all $x \in \mathbb{R}^+$ then $f$ is constant.\\
+\indent We break the domain of the problem up into $D_1 = [0,1)$ and $D_2 = [1,\infty)$. We also need two theorems from Rudin which are:
+
+
+\begin{equation}
+\lim_{n \to \infty} p^n = 0 \quad \text{if} \; p < 1 \label{eqn:limtozero}
+\end{equation}
+
+\begin{equation}
+\lim_{n \to \infty} \sqrt[n]{p} = 1 \quad \text{if} \; p > 0 \label{eqn:limtoone}
+\end{equation}
+
+
+For any $x \in D_1$ we may form a sequence $(x^n)$, and by equation $(\ref{eqn:limtozero})$, we know that $\lim_{n \to \infty} x^n = 0$. Then, by the continuity of $f$ we have $\lim_n f(x^n) = f(0)$.
 
 \vspace{15pt}
 \begin{flushleft} 
