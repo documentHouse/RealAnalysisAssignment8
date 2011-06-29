@@ -62,14 +62,23 @@ $g(x) = f(x+1) - f(x)$ has the property that $g(x) \to 0$.  \\
 Since $x' \in (x,x+1)$ for all $x$ we have $x < x'$ so 
 \[ \lim_{x \to \infty} g(x) = \lim_{x \to \infty} f'(x')  =   \lim_{x' \to \infty} f'(x') = 0\]
 
+\newpage
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 3\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
-
-
+We are being asked to show that the following equation has at least one root between 0 and 1:
+\[ C_0 + C_1 x + \cdots + C_{n-1} x^{n-1} + C_n x^n = 0 \] 
+ given that 
+ \begin{equation} 
+ C_0 + \frac{C_1}{2} + \cdots +\frac{C_{n-1}}{n} + \frac{C_n}{n+1}  = 0 \label{eqn:dercond}
+ \end{equation}
+ 
+ \indent Given the form of $(\ref{eqn:dercond})$ it is clear we should look at an auxiliary function to solve the problem. Consider the function:
+ \[ g(x) = C_0 x + C_1 \frac{x^2}{2} + \cdots + C_{n-1} \frac{x^n}{n} + C_n \frac{x^{n+1}}{n+1} \]
+ 
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 4\\
