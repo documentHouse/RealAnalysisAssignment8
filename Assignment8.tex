@@ -76,8 +76,15 @@ We are being asked to show that the following equation has at least one root bet
  C_0 + \frac{C_1}{2} + \cdots +\frac{C_{n-1}}{n} + \frac{C_n}{n+1}  = 0 \label{eqn:dercond}
  \end{equation}
  
- \indent Given the form of $(\ref{eqn:dercond})$ it is clear we should look at an auxiliary function to solve the problem. Consider the function:
- \[ g(x) = C_0 x + C_1 \frac{x^2}{2} + \cdots + C_{n-1} \frac{x^n}{n} + C_n \frac{x^{n+1}}{n+1} \]
+ \noindent Given the form of $(\ref{eqn:dercond})$ we will use an auxiliary function to solve the problem. Consider the function:
+ 
+ \begin{equation} 
+ g(x) = C_0 x + C_1 \frac{x^2}{2} + \cdots + C_{n-1} \frac{x^n}{n} + C_n \frac{x^{n+1}}{n+1} \label{eqn:auxfunc}
+ \end{equation}
+ 
+\noindent It is clear from the definition of $(\ref{eqn:auxfunc})$ that $g(0) = 0$ and also obviously the case that $g(1) = 0$ by $(\ref{eqn:dercond})$. From the mean value theorem we know that there exists $x \in (a,b)$ such that $f(b) - f(a) = f'(x)(b-a)$. Letting $a = 0$ and $b = 1$ we get that there is a $x \in (0,1)$ such that $0 = g(1)-g(0)  = g'(x)(1 - 0) = g'(x)$. We know however that 
+\[ g'(x) =  C_0 + C_1 x + \cdots + C_{n-1} x^{n-1} + C_n x^n \]
+so x is the desired root.
  
 \vspace{15pt}
 \begin{flushleft} 
