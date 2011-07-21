@@ -93,6 +93,32 @@ so x is the desired root.
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+\noindent Part a) We need to show that there is at most one fixed point given that $f'(t) \neq 1$ for all $t \in \mathbb{R}$\\
+\indent  Suppose there is more than one fixed point and let $x_0$ and $x_1$ be these fixed points.  By the mean value theorem there exists an $x \in (x_0,x_1)$ such that 
+\begin{equation}
+ f(x_1) - f(x_0) = f'(x)(x_1-x_0) \label{eqn:fixderiv}
+ \end{equation}
+However, since we have $f(x_0) = x_0$ and $f(x_1) = x_1$ equation $(\ref{eqn:fixderiv})$ gives
+\[ f'(x) = \frac{f(x_1)-f(x_0)}{x_1-x_0} = \frac{x_1-x_0}{x_1-x_0} = 1\]
+This is a contradiction, so there may be at most one fixed point.\\
+
+\noindent Part b) We would like to show that $f(t) = t + (1+e^t)^{-1}$ has no fixed point eventhough $0 < f(t) < 1$ for all $t$.
+
+If we have a fixed point then $f(t) = t$ by definition. So we have
+\begin{equation}
+t = t + (1+e^t)^{-1} \implies 0 = (1+e^t)^{-1} 
+\end{equation}
+
+Since $e^t > 0$ for all $t$ we must have $1+e^t > 0$ for all $t$. This says if there exists a $t$ satisfying the equation about we may multiply the above by $1+e^t$ to get $0 = 1$ which is a contradiction.\\
+
+Part c) For the final part we must show that a fixed point of $f$ exists if $|f'(t)| \le A < 1$ for all $t$. We must all show that the sequence defined by $x_{n+1} = f(x_n)$ with arbitrary $x_1$ converges to the fixed point.\\
+
+For the first half we start by defining a function $g(t) = t - f(t)$. If $g(t_0) = 0$ then we are done so let's assume that at some $t_1$ we have $g(t_1) < 0 $. By hypothesis we have $f'(t) < A$ for all $t$ so let $\epsilon = 1 - A > 0$. From these observations we derive the following:
+\begin{equation}
+g'(t) = 1 - f'(t) > 1 - A = \epsilon > 0 \hspace{15pt} \text{for all t}\nonumber
+\end{equation}
+
+
 
 \vspace{15pt}
 \begin{flushleft} 
