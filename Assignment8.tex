@@ -111,13 +111,23 @@ t = t + (1+e^t)^{-1} \implies 0 = (1+e^t)^{-1}
 
 Since $e^t > 0$ for all $t$ we must have $1+e^t > 0$ for all $t$. This says if there exists a $t$ satisfying the equation about we may multiply the above by $1+e^t$ to get $0 = 1$ which is a contradiction.\\
 
-Part c) For the final part we must show that a fixed point of $f$ exists if $|f'(t)| \le A < 1$ for all $t$. We must all show that the sequence defined by $x_{n+1} = f(x_n)$ with arbitrary $x_1$ converges to the fixed point.\\
+\noindent Part c) For the final part we must show that a fixed point of $f$ exists if $|f'(t)| \le A < 1$ for all $t$. We must also show that the sequence defined by $x_{n+1} = f(x_n)$ with arbitrary $x_1$ converges to the fixed point.\\
 
 For the first half we start by defining a function $g(t) = t - f(t)$. If $g(t_0) = 0$ then we are done so let's assume that at some $t_1$ we have $g(t_1) < 0 $. By hypothesis we have $f'(t) < A$ for all $t$ so let $\epsilon = 1 - A > 0$. From these observations we derive the following:
 \begin{equation}
-g'(t) = 1 - f'(t) > 1 - A = \epsilon > 0 \hspace{15pt} \text{for all t}\nonumber
+g'(t) = 1 - f'(t) > 1 - A = \epsilon > 0 \hspace{15pt} \text{for all t}
 \end{equation}
 
+\noindent Now let $t_2 = t_1 - \frac{g(t_1)}{\epsilon}$ and note that the mean value theorem says there is a $t \in (t_1, t_2)$ such that 
+\begin{eqnarray*}
+g(t_2)-g(t_1) &=& g'(t)(t_2-t_1) \\
+		     &>& \epsilon (t_2 - t_1) \\
+		     &=& \epsilon(t_1 - \frac{g(t_1)}{\epsilon} - t_1) \\
+		     &=& -g(t_1)
+\end{eqnarray*}
+
+So we have $g(t_2)-g(t_1) > -g(t_1) \implies g(t_2) > 0$. This gives $t_1, t_2$ such that $g(t_1) < 0 < g(t_2)$. By the continuity of $g$, being the difference of $f(t)$ and $t$ which are both continuous, we may apply a theorem in rudin that says: If $f(a) < x < f(b)$ and $f$ is continuous there exists a $x \in (a,b)$ such that $f(x) = c$. Therefore we have a $t' \in (t_1,t_2)$ such that $g(t') = 0$ so $t'$ is a fixed point.\\
+The analysis is similar with if we start with a $t_2$ such that $g(t_2) > 0$. We repeat the analysis by letting $t_1 = t_2 + \frac{g(t_2)}{\epsilon}$.
 
 
 \vspace{15pt}
