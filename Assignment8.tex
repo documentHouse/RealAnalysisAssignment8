@@ -127,8 +127,26 @@ g(t_2)-g(t_1) &=& g'(t)(t_2-t_1) \\
 \end{eqnarray*}
 
 So we have $g(t_2)-g(t_1) > -g(t_1) \implies g(t_2) > 0$. This gives $t_1, t_2$ such that $g(t_1) < 0 < g(t_2)$. By the continuity of $g$, being the difference of $f(t)$ and $t$ which are both continuous, we may apply a theorem in rudin that says: If $f(a) < x < f(b)$ and $f$ is continuous there exists a $x \in (a,b)$ such that $f(x) = c$. Therefore we have a $t' \in (t_1,t_2)$ such that $g(t') = 0$ so $t'$ is a fixed point.\\
-The analysis is similar with if we start with a $t_2$ such that $g(t_2) > 0$. We repeat the analysis by letting $t_1 = t_2 + \frac{g(t_2)}{\epsilon}$.
-
+\indent The analysis is similar with if we start with a $t_2$ such that $g(t_2) > 0$. We repeat the analysis by letting $t_1 = t_2 - \frac{g(t_2)}{\epsilon}$.\\
+\indent The second part of the problem requires that we show that the sequence $x_{n+1} = f(x_n)$ converges to the fixed point. There is at least one fixed point by the argument in the first part of the is problem. There is at most one fixed point by part a of this problem.\\
+\indent Let $x$ be the fixed point and note again that $0 < |f(t)| \le A < 1$ for all $t \in \mathbb{R}$. We may derive the following from the sequence which assumes an arbitrary $x_1$:
+\begin{eqnarray*}
+|x_2 -x| &=& |f(x_1)-f(x)|  \quad \text{By the definition of the sequence and of the fixed point} \\
+	   &=& |f'(x'_0)(x_1-x)| \quad \text{By the mean value theorem} \\ 
+	   &\le& A |(x_1-x)| \quad \text{By the definition of $A$}
+\end{eqnarray*}
+Repeating the analysis for the next element in the sequence:
+\begin{eqnarray*}
+|x_3 -x| &=& |f(x_2)-f(x)|  \quad \text{By the definition of the sequence and of the fixed point} \\
+	   &=& |f'(x'_1)(x_1-x)| \quad \text{By the mean value theorem} \\ 
+	   &\le& A |(x_2-x)| \quad \text{By the definition of $A$} \\
+  	   &\le& A^2 |(x_1-x)| \quad \text{From the previous derivation} \\
+\end{eqnarray*}
+This shows the pattern which can be easily shown by induction that
+\begin{equation*}
+|x_n-x| \le A^{n-1}|(x_1-x)|
+\end{equation*}
+Since $A < 1$ a theorem in Rudin says that $\lim p^n \to 0$ if $0 < p < 1$ so $x_n \to x$ by comparison.
 
 \vspace{15pt}
 \begin{flushleft} 
