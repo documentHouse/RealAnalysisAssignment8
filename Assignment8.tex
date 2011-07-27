@@ -156,7 +156,7 @@ Since $A < 1$ a theorem in Rudin says that $\lim p^n \to 0$ if $0 < p < 1$ so $x
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
-The goal of this problem is to establish that if $f$ is continuous, $f'$ exists for all $x \neq 0$, and $\lim_{t \to 0}f'(t) \to 3$ then $f'(0)$ exists.\\
+The goal of this problem is to establish that if $f$ is continuous, $f'$ exists for all $x \neq 0$, and \\$\lim_{t \to 0}f'(t) \to 3$ then $f'(0)$ exists.\\
 \indent If we let:
 \[\phi(t) = \frac{f(t) - f(0)}{t - 0}\]
 Then we may show the result if we can show that left and right hand limits, $\phi(0^-)$ and $\phi(0^+)$ respectively, are equal.\\
@@ -170,8 +170,8 @@ Thus we have
 	       &=& 3 \quad \text{By the hypothesis that $\lim_{t \to 0}f(t) \to 3$}
 \end{eqnarray*}
 
-If we chose another sequence $t'_n$ such that $t'_n \in (\infty,0)$ and $\lim_{n \to \infty}t'_n = 0$
-then we repeat the argument above to show that $\phi(0^-) = 3$. This shows that $f'(0)$ exists and $f'(0) = 3$.
+If we chose another sequence $t'_n$ such that $t'_n \in (-\infty,0)$ and $\lim_{n \to \infty}t'_n = 0$
+then we repeat the argument above to show that $\phi(0^-) = 3$. Since $\phi(0^-) = \phi(0^+) = 3$ this shows that $f'(0)$ exists and $f'(0) = 3$.
 
 \vspace{15pt}
 \begin{flushleft} 
