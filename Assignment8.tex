@@ -148,12 +148,30 @@ This shows the pattern which can be easily shown by induction that
 \end{equation*}
 Since $A < 1$ a theorem in Rudin says that $\lim p^n \to 0$ if $0 < p < 1$ so $x_n \to x$ by comparison.
 
+\newpage
+
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 5\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+The goal of this problem is to establish that if $f$, $f'$ exists for all $x \neq 0$, and $\lim_{t \to 0}f'(t) \to 3$ then $f'(0)$ exists.\\
+\indent If we let:
+\[\phi(t) = \frac{f(t) - f(0)}{t - 0}\]
+Then we may show the result if we can show that left and right hand limits, $\phi(0^-)$ and $\phi(0^+)$ respectively, are equal.\\
+\indent Consider a sequence $t_n$ such that $t_n \in (0,\infty)$ and $\lim_{n \to \infty}t_n = 0$. For each $t_n$ there exists by the mean value theorem an $x \in (0,t_n)$ such that
+\[ f(t_n) - f(0) = f'(x)(t_n - 0)\]
+Thus we have
+\begin{eqnarray*}
+\phi(0^+) &=& \lim_{n \to \infty} \frac{f(t_n) - f(0)}{t_n - 0} \\
+	       &=& \lim_{t \to 0^+} f'(x) \\
+      	       &=& \lim_{x \to 0^+} f'(x) \quad \text{Since x $\in$ (0,$t$) for all $t$}\\
+	       &=& 3 \quad \text{By the hypothesis that $\lim_{t \to 0}f(t) \to 3$}
+\end{eqnarray*}
+
+If we chose another sequence $t'_n$ such that $t'_n \in (\infty,0)$ and $\lim_{n \to \infty}t'_n = 0$
+then we repeat the argument above to show that $\phi(0^-) = 3$. This shows that $f'(0)$ exists and $f'(0) = 3$.
 
 \vspace{15pt}
 \begin{flushleft} 
