@@ -179,7 +179,18 @@ then we repeat the argument above to show that $\phi(0^-) = 3$. Since $\phi(0^-)
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
-
+We are given that $f$ is a real function on $[a,b]$ and that $f^{(n-1)}$ is continuous. We also are given that for $x \in (a,b)$ we have $f'(x_0) = f''(x_0) = \cdots = f^{(n-1)}(x_0) = 0$ and we are asked to show that if $n$ is even and $f^{(n)}(x_0) = A \neq 0$ then $f$ has a minimum at $x_0$ if $A > 0$ and a maximum if $A < 0$. If $n$ is not even then $f$ does not have either a minimum or a maximum at $x_0$.\\
+\indent Taylors theorem says that if we let
+\begin{equation} 
+P(t) = \sum^{n-1}_{k=0}\frac{f^{(k)}(\alpha)}{k!}(t - \alpha)^k \quad \text{where $\alpha \in (a,b)$ } \label{eqn:polynom}
+\end{equation}
+then if $\beta \in (a,b)$ then for a given $\beta$ there exists $x \in (\alpha,\beta)$ such that
+\begin{equation} 
+f(\beta) = P(\beta) + \frac{f^{(n)}(x)}{n!} (\beta-\alpha)^n \label{eqn:taylorrelate}
+\end{equation}
+assuming that $f^{(n-1)}$ is continuous and that $f^{(n)}$ exists for every $t \in (a,b)$.\\
+\indent Letting $\alpha = x_0$ and applying the hypotheses of the problem to talyors theorem yields from $(\ref{eqn:polynom})$ that $P(t) = f(\alpha)$ for all $t$. If we now substitute into equation $(\ref{eqn:taylorrelate})$ this fact we get the relation
+\[ f(\beta) = f(\alpha) + \frac{f^{(n)}(x)}{n!} (\beta-\alpha)^n \]
 
 \vspace{15pt}
 \begin{flushleft} 
