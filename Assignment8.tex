@@ -189,9 +189,17 @@ then if $\beta \in (a,b)$ then for a given $\beta$ there exists $x \in (\alpha,\
 f(\beta) = P(\beta) + \frac{f^{(n)}(x)}{n!} (\beta-\alpha)^n \label{eqn:taylorrelate}
 \end{equation}
 assuming that $f^{(n-1)}$ is continuous and that $f^{(n)}$ exists for every $t \in (a,b)$.\\
-\indent Letting $\alpha = x_0$ and applying the hypotheses of the problem to talyors theorem yields from $(\ref{eqn:polynom})$ that $P(t) = f(\alpha)$ for all $t$. If we now substitute into equation $(\ref{eqn:taylorrelate})$ this fact we get the relation
-\[ f(\beta) = f(\alpha) + \frac{f^{(n)}(x)}{n!} (\beta-\alpha)^n \]
-
+\indent Letting $\alpha = x_0$ and applying the hypotheses of the problem to talyors theorem yields from $(\ref{eqn:polynom})$ that $P(t) = f(x_0)$ for all $t$. If we now substitute into equation $(\ref{eqn:taylorrelate})$ this fact we get the relation
+\[ f(\beta) = f(x_0) + \frac{f^{(n)}(x)}{n!} (\beta-x_0)^n \]
+We may rewrite this last expression as:
+\begin{equation}
+f^{(n)}(x) = n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n} \label{eqn:lhospdef}
+\end{equation}
+We know that $f^{(n)}(x_0) = A$ we would like to show that $\lim_{\beta \to x_0} f^{(n)}(x) = A$. We apply L'Hospital's theorem $n-1$ times to $(\ref{eqn:lhospdef})$ we get
+\[ \lim_{\beta \to x_0}  n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n}  =  \lim_{\beta \to x_0}\frac{f^{(n-1)}(\beta) }{\beta-x_0} \]
+Because $f^{(n-1}(x_0) = 0$ we may substitute it into the previous expression to get
+\[ \lim_{\beta \to x_0}  n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n}  = \lim_{\beta \to x_0} \frac{f^{(n-1)}(\beta) - f^{(n-1)}(x_0) }{\beta-x_0} = f^{(n)}(x_0) = A \]
+Because we now have $\lim_{\beta \to x_0} f^{(n)}(x) = A$ 
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 7\\
