@@ -198,13 +198,21 @@ f^{(n)}(x) = n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n} \label{eqn:lhospdef}
 We know that $f^{(n)}(x_0) = A$ we would like to show that $\lim_{\beta \to x_0} f^{(n)}(x) = A$. We apply L'Hospital's theorem $n-1$ times to $(\ref{eqn:lhospdef})$ we get
 \[ \lim_{\beta \to x_0}  n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n}  =  \lim_{\beta \to x_0}\frac{f^{(n-1)}(\beta) }{\beta-x_0} \]
 Because $f^{(n-1}(x_0) = 0$ we may substitute it into the previous expression to get
-\[ \lim_{\beta \to x_0}  n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n}  = \lim_{\beta \to x_0} \frac{f^{(n-1)}(\beta) - f^{(n-1)}(x_0) }{\beta-x_0} = f^{(n)}(x_0) = A \]
-Because we now have $\lim_{\beta \to x_0} f^{(n)}(x) = A$ 
+\[ \lim_{\beta \to x_0}  n! \frac{f(\beta) - f(x_0)}{(\beta-x_0)^n}  = \lim_{\beta \to x_0} \frac{f^{(n-1)}(\beta) - f^{(n-1)}(x_0) }{\beta-x_0} = f^{(n)}(x_0) = A \]\\
+\indent First we assume that $A > 0$ and $n$ is even. Since we now have $\lim_{\beta \to x_0} f^{(n)}(x) = A$ we can pick an $\epsilon$ such that $A - \epsilon > 0$ and because the limit exists we have a neighborhood $N(x_0)$ such that $f^{(n)}(x_0) > 0$. Therefore in $N(x_0)$ it is true that 
+\[ f(\beta) - f(x_0) = \frac{f^{(n)}(x)}{n!} (\beta- x_0)^n  > 0 \quad \text{since $(\beta - x_0)^n > 0$}\]
+This implies that $f(\beta) > f(x_0)$ for $\beta \in N(x_0)$ which says that we have a minimum.\\
+\indent For the case where $A < 0$ we pick a $\epsilon$ such that $A + \epsilon < 0$ and there exists such a neighborhood of radius $\epsilon$ by the existence of the limit. We repeat the argument above to show that  $f(\beta) < f(x_0)$ which shows that we have a maximum.\\
+\indent In the case that $n$ is odd then $(\beta - x_0)^n > 0$ when $\beta > x_0$ and $(\beta - x_0)^n < 0$
+when $\beta < x_0$ so there can be no maximum or minimum at $x_0$.
+
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 7\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
+
+We are given the function $f(x) = |x|^3$ and first asked to show that $f'(x)$ and $f''(x)$ exist for all $x$. We also need to show that $f'''(0)$ does not exist.
 
 
 %\vspace{15pt}
