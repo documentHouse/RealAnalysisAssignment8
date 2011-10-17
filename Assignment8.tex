@@ -20,7 +20,7 @@
 
 \title{Real Analysis $\mathbb{I}$: \\ Assignment 8}
 \author{Andrew Rickert}
-\date{Started: June 20, 2011 \\ \hspace{1pt} Ended: June ??,  2011}                                           % Activate to display a given date or no date
+\date{Started: June 20, 2011 \\ \hspace{1pt} Ended: October 17,  2011}                                           % Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -214,7 +214,13 @@ when $\beta < x_0$ so there can be no maximum or minimum at $x_0$.
 
 We are given the function $f(x) = |x|^3$ and first asked to show that $f'(x)$ and $f''(x)$ exist for all $x$. We also need to show that $f'''(0)$ does not exist.
 
-
+For $x > 0$ we may write $f(x) = |x|^3$ as $f(x) = x^3$. So for positive values we have $f'(x) = 3 x^2$. Similarly for  $x < 0$ we have $f(x) = |x|^3 = - x^3$ which gives $f(x) = -3 x^2$. We calculate the derivative at zero from the definition
+\[ f'(0) = \lim_{t \to 0}\frac{f(t) - f(0)}{t} = \lim_{t \to 0} \frac{|t|^3}{t} = \lim_{t \to 0} \frac{t|t|^2}{t} = \lim_{t \to 0} |t|^2 = 0 \]
+We can proceed similarly for the second derivative and get $f''(x) = 6 x$ for $x > 0$ and $f''(x) = - 6 x$ for $x < 0$. We now repeat the calculation above to see that 
+\[ f''(0) = \lim_{t \to 0}\frac{f'(t) - f'(0)}{t} = \lim_{t \to 0} \frac{3 t |t|}{t} = \lim_{t \to 0} 3|t|  = 0 \]
+\indent This says that both the first and second derivatives exist. Repeating the procedure a final time we see that third derivative is $f'''(x) = 6$ for $x > 0$ and $f'''(x) = -6$ for $x < 0$. This time we get
+\[ f'''(0) = \lim_{t \to 0}\frac{f''(t) - f''(0)}{t} = \lim_{t \to 0} \frac{6|t|}{t} \]
+since we have $6 = f'''(0^+) \neq f'''(0^-) = -6$ the derivative $f'''(0)$ does not exist.
 %\vspace{15pt}
 %\begin{flushleft} 
 %\textbf{Class 18.100B} - Extra Problem 1\\
